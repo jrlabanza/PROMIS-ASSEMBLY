@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "folStatus";
+    Layout = "~/Views/Shared/_Modal.cshtml";
+}
+
+<div class="content">
+    <div class="intro">
+        <p style='text-align: center;'><b>LSI FOL EQUIPMENT STATUS</b></p>
+        <input class="loc" value="FOL" hidden />
+        <div style="width: 100%;">
+            <input id="tempID" name="name" value=" " hidden />
+            <table style="width: auto; margin: 0px auto 0px;border-collapse: collapse; font-size:.7em">
+                <thead>
+                    <tr>
+                        <td>
+                            PROCESS:<select id="pkgLine" class="filter" name="pkgLine" data-col="PACKAGE LINE">
+                                 <option value="" default selected></option>  
+                            </select>
+                        </td>
+
+                        <td style="padding-left:15px;">
+                            Status owner:<select id="statusOwner" class="filter" name="statusOwner" data-col="STATUS OWNER">
+                                <option value="" default selected></option>
+                            </select>
+                        </td>
+
+                        <td style="padding-left:15px;">
+                            MACHINE PF:<select id="tstpf" class="filter" name="tstpf" data-col="MACHINE PF">
+                                <option value="" default selected></option>
+                            </select>
+                        </td>
+
+                        <td style="padding-left:15px;">
+                            MACHINE ID:<select id="tstID" class="filter" name="tstID" data-col="MACHINE ID">
+                                <option value="" default selected></option>
+                            </select>
+                        </td>
+
+                        <td style="padding-left:15px;">
+                            |Keyword:
+                            <input id="keyword" type="text" name="keyword" placeholder="Search Keyword"/>|
+                            <input id="filter" type="button" name="filter" value="Filter">
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div id="container">
+        <div id='forUpdate'></div>
+        <table id="keywords" class="table table-responsive-sm blue custom_table" style="font-size:.5em">
+            <thead id="thead">
+                <tr style="cursor: default;">
+                    <th>DATE / TIME</th>
+                    <th>MACHINE ID</th>
+                    <th>MACHINE PF</th>
+                    <th>PRODUCT NAME</th>
+                    <th>PACKAGE</th>
+                    <th>LOT ID</th>
+                    <th>STATUS</th>
+                    <th>STATUS OWNER</th>
+                    <th>DURATION (HRS.)</th>
+                    <th>COMMENTS</th>
+                    <th>WHO</th>
+                </tr>
+            </thead>
+            <tbody class="tbodyFol"></tbody>
+        </table>
+    </div>
+</div>
+
+<div class="footer">
+</div>
+<script type="text/javascript">
+
+</script>
+
+
